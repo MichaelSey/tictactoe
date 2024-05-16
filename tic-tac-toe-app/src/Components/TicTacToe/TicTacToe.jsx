@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import './TicTacToe.css'
 import  circle_icon  from '../Assets/circle.png'
-import  cross_icon  from '../Assets/cross.png'
+import  cross_icon   from '../Assets/cross.png'
 
 let data = ["","","","","","","","",""]
 
@@ -81,20 +81,20 @@ export const TicTacToe
 
     const won = (winner) => {
         setLock(true);
-        if(winner[0]==="X")
+        if(winner==="X")
         {
-            titleRef.current.innerHTML = "Winner is: <img src='${cross_icon}'>";
+            titleRef.current.innerHTML = `Winner is: <img src=${cross_icon}>`;
         }
         else
         {
-            titleRef.current.innerHTML = "Winner is: <img src='${circle_icon}'>";
+            titleRef.current.innerHTML = `Winner is: <img src=${circle_icon}>`;
         }
     }
 
     const reset = () => {
         setLock(false);
         data = ["","","","","","","","",""];
-        titleRef.current.innerHTML = "Tic Tac Toe Game In <span>React</span>";
+        titleRef.current.innerHTML = `Tic Tac Toe Game In <span>React</span>`;
         box_array.map((e)=>{
             e.current.innerHTML = "";
         })
